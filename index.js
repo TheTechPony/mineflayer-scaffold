@@ -4,6 +4,7 @@ var EventEmitter = require('events').EventEmitter
 module.exports = init;
 
 // instantiated from init
+var mcData=require("minecraft-data")("1.8.8");
 var vec3;
 var sideVecs;
 var materials;
@@ -37,7 +38,7 @@ function init(mineflayer) {
     vec3( 0,  0, -1),
     vec3( 0,  0,  1),
   ];
-  materials = mineflayer.materials;
+  materials = mcData.materials;
   return inject;
 }
 
